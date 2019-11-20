@@ -11,7 +11,9 @@ public class Main {
         String sizeStr = scanner.nextLine();
         // String size to int size
         int size = Integer.parseInt(sizeStr);
-        // We would use scanner.nextInt() to read size like this
+        // Scanner is skipping nextLine() after using nextInt()
+        // We would not use nextInt() before nextLine()
+        // What if we really want to use nextInt(). We would use nextInt() to read size like this
         // We would add scanner.nextLine() after scanner.nextInt() to consume rest of that line including newline, so the following nextLine() will work fine
 //        int size = scanner.nextInt();
 //        scanner.nextLine();
@@ -29,6 +31,7 @@ public class Main {
 //        System.out.print("[");
         for (int i = size - 1; i >= 0; i--) {
             System.out.print(numberArr[i]);
+            // The last space will be removed
             if (i > 0) {
                 System.out.print(" ");
 
