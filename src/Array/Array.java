@@ -8,6 +8,7 @@ public class Array {
         Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter array size ");
         int size = scanner.nextInt();
+//        scanner.nextInt();
         int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
 //            System.out.println("Enter the " + (i + 1) + "th " + " number ");
