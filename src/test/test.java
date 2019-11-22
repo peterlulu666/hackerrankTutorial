@@ -1,8 +1,8 @@
-package BubbleSort;
+package test;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class test {
     public static void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
@@ -12,6 +12,9 @@ public class BubbleSort {
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
 
+                }
+                else {
+                    System.out.println("We will not swap the number " + arr[j] +" in index " + j + " with the number " + arr[j + 1] + " in index " + (j + 1));
                 }
             }
         }
@@ -25,3 +28,4 @@ public class BubbleSort {
 
     }
 }
+
