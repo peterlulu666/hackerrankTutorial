@@ -3,29 +3,46 @@ package test;
 import java.util.Arrays;
 
 public class test {
-    public static void bubbleSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    System.out.println("Swap the number " + arr[j] +" in index " + j + " with the number " + arr[j + 1] + " in index " + (j + 1));
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+    public static void BinarySearch(int lowerBound, int upperBound, int[] arr, int number) {
+        if (upperBound >= lowerBound) {
+            int mid = lowerBound + (upperBound - lowerBound) / 2;
+            if (number > arr[mid]) {
+                lowerBound = mid + 1;
+                BinarySearch(lowerBound, upperBound, arr, number);
 
-                }
-                else {
-                    System.out.println("We will not swap the number " + arr[j] +" in index " + j + " with the number " + arr[j + 1] + " in index " + (j + 1));
-                }
+            } else if (number < arr[mid]) {
+                upperBound = mid - 1;
+                BinarySearch(lowerBound, upperBound, arr, number);
+
+            } else {
+                System.out.println("found the number. ");
+                System.out.println("The number is in the index " + mid);
+
             }
+
+        } else {
+            System.out.println("The number is not in the array. ");
         }
+
     }
+
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 2, 9, 5, 4, 7, 8, 6, 10};
-        bubbleSort(arr);
-        System.out.println(Arrays.toString(arr));
+        int[] unsortedArr = {1, 3, 2, 9, 5, 4, 7, 8, 6, 10};
+        System.out.println("The array is unsorted. ");
+        System.out.println(Arrays.toString(unsortedArr));
+        System.out.println("We will search for the number 6. ");
+        BinarySearch(0, unsortedArr.length - 1, unsortedArr, 6);
+        System.out.println("The binary search will not work for unsorted array. ");
+        int[] sortedArr = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        System.out.println("The array is sorted. ");
+        System.out.println(Arrays.toString(sortedArr));
+        System.out.println("We will search for the number 6. ");
+        BinarySearch(0, sortedArr.length - 1, sortedArr, 6);
+        System.out.println("The binary search will work for sorted array. ");
 
 
     }
-}
 
+
+}
