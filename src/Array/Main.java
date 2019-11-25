@@ -19,8 +19,10 @@ public class Main {
 //        scanner.nextLine();
 //        System.out.println("Enter array and use space to separate integer ");
         String arrStr = scanner.nextLine();
+        // String to string array
         String[] arrStrSplit = arrStr.split(" ");
         scanner.close();
+//        size = arrStrSplit.length;
         int[] numberArr = new int[size];
         for (int i = 0; i < size; i++) {
             numberArr[i] = Integer.parseInt(arrStrSplit[i]);
