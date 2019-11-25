@@ -23,6 +23,7 @@ public class Main {
         String[] arrStrSplit = arrStr.split(" ");
         scanner.close();
 //        size = arrStrSplit.length;
+        // String array to integer array
         int[] numberArr = new int[size];
         for (int i = 0; i < size; i++) {
             numberArr[i] = Integer.parseInt(arrStrSplit[i]);
