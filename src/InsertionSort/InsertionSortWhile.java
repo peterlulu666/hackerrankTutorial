@@ -15,10 +15,10 @@ public class InsertionSortWhile {
 //                arr[mover] = temp;
 //                mover = mover - 1;
 //            }
-            for (int moverIndex = boundaryIndex - 1; moverIndex >= 0; moverIndex--) {
-                if (temp < arr[moverIndex]) {
-                    arr[moverIndex + 1] = arr[moverIndex];
-                    arr[moverIndex] = temp;
+            for (int sortedIndex = boundaryIndex - 1; sortedIndex >= 0; sortedIndex--) {
+                if (temp < arr[sortedIndex]) {
+                    arr[sortedIndex + 1] = arr[sortedIndex];
+                    arr[sortedIndex] = temp;
 
                 }
 
