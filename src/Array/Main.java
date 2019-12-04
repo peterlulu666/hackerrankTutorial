@@ -13,8 +13,9 @@ public class Main {
         int size = Integer.parseInt(sizeStr);
         // Scanner is skipping nextLine() after using nextInt()
         // We would not use nextInt() before nextLine()
-        // What if we really want to use nextInt(). We would use nextInt() to read size like this
-        // We would add scanner.nextLine() after scanner.nextInt() to consume rest of that line including newline, so the following nextLine() will work fine
+        // What if we really want to use nextInt() to read size
+        // We would add scanner.nextLine() after scanner.nextInt() to consume rest of that line including newline,
+        // so the following nextLine() will work fine
 //        int size = scanner.nextInt();
 //        scanner.nextLine();
 //        System.out.println("Enter array and use space to separate integer ");
