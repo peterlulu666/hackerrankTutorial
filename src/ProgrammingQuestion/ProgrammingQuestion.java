@@ -48,6 +48,39 @@ public class ProgrammingQuestion {
 
         }
         System.out.println("The product is " + product);
+        // number in indexA is greater than number in indexA - 1
+        boolean isIncreasing = true;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                isIncreasing = false;
+                break;
+
+            }
+
+        }
+        if (isIncreasing) {
+            System.out.println("It is in the increasing order. ");
+
+        } else {
+            System.out.println("It is not in the increasing order. ");
+
+        }
+        // bubble sort
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[j + 1] < arr[j]) {
+                    // swap
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+
+                }
+
+            }
+
+        }
+        System.out.println("The smallest number is " + arr[0]);
+        System.out.println("The highest number is " + arr[arr.length - 1]);
         double mean = (double) sum / arr.length;
         System.out.println("The mean is " + mean);
         int count = 0;
