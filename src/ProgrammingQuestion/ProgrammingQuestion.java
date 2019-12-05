@@ -8,8 +8,8 @@ public class ProgrammingQuestion {
     public static int perfectSquares = 30;
 
     public static void main(String[] args) {
-        helloWorld();
-        oneHundredInteger();
+        printHelloWorld();
+        printOneHundredInteger();
         printPerfectSquares();
         var arr = inputInteger();
         printReverseOrder(arr);
@@ -54,13 +54,13 @@ public class ProgrammingQuestion {
     }
 
     // Prints “Hello World”
-    public static void helloWorld() {
+    public static void printHelloWorld() {
         System.out.println("Hello world");
 
     }
 
     // Prints the integers from 1 to 100
-    public static void oneHundredInteger() {
+    public static void printOneHundredInteger() {
         for (int i = startingNumber; i <= endingNumber; i++) {
             System.out.println(i);
 
