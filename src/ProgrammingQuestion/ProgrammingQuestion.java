@@ -8,15 +8,36 @@ public class ProgrammingQuestion {
     public static int perfectSquares = 30;
 
     public static void main(String[] args) {
-        System.out.println("Hello world");
-        for (int i = startingNumber; i <= endingNumber; i++) {
-            System.out.println(i);
+        helloWorld();
+        oneHundredInteger();
+        printPerfectSquares();
+        var arr = inputInteger();
+        printReverseOrder(arr);
+        int sum = printSum(arr);
+        int product = printProduct(arr);
+        isIncreasingOrder(arr);
+        largestAndSmallest(arr);
+        printMean(arr, sum);
+        String str = inputString();
+        System.out.println(isPalindrome(str));
+        System.out.println(allSubstring(str));
+        System.out.println(countUnique(str));
+        System.out.println(vowelsRemoved(str));
 
-        }
-        for (int i = startingNumber; i <= perfectSquares; i++) {
-            System.out.println(i + " * " + i + " = " + (i * i));
 
-        }
+    }
+
+    // Read a string from the user
+    public static String inputString() {
+        System.out.println("Enter a word ");
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        return str;
+
+    }
+
+    // Ask the user for an integer N, reads in N integers
+    public static int[] inputInteger() {
         System.out.println("Enter array size ");
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
@@ -28,6 +49,36 @@ public class ProgrammingQuestion {
 
         }
         scanner.nextLine();
+        return arr;
+
+    }
+
+    // Prints “Hello World”
+    public static void helloWorld() {
+        System.out.println("Hello world");
+
+    }
+
+    // Prints the integers from 1 to 100
+    public static void oneHundredInteger() {
+        for (int i = startingNumber; i <= endingNumber; i++) {
+            System.out.println(i);
+
+        }
+
+    }
+
+    // Prints the perfect squares from 1 to 30​^2
+    public static void printPerfectSquares() {
+        for (int i = startingNumber; i <= perfectSquares; i++) {
+            System.out.println(i + " * " + i + " = " + (i * i));
+
+        }
+
+    }
+
+    // prints them in reverse order
+    public static void printReverseOrder(int[] arr) {
         for (int i = arr.length - 1; i >= 0; i--) {
             System.out.print(arr[i]);
             if (i > 0) {
@@ -36,18 +87,36 @@ public class ProgrammingQuestion {
 
         }
         System.out.println("\n");
+
+    }
+
+    // prints the total sum
+    public static int printSum(int[] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             sum = sum + arr[i];
 
         }
         System.out.println("The sum is " + sum);
+
+        return sum;
+
+    }
+
+    // prints the total product
+    public static int printProduct(int[] arr) {
         int product = 1;
         for (int i = 0; i < arr.length; i++) {
             product = product * arr[i];
 
         }
         System.out.println("The product is " + product);
+        return product;
+
+    }
+
+    // decides if the numbers were entered in increasing order
+    public static void isIncreasingOrder(int[] arr) {
         // number in indexA is greater than number in indexA - 1
         boolean isIncreasing = true;
         for (int i = 1; i < arr.length; i++) {
@@ -65,6 +134,11 @@ public class ProgrammingQuestion {
             System.out.println("It is not in the increasing order. ");
 
         }
+
+    }
+
+    // finds the largest and smallest values
+    public static void largestAndSmallest(int[] arr) {
         // bubble sort
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
@@ -81,6 +155,11 @@ public class ProgrammingQuestion {
         }
         System.out.println("The smallest number is " + arr[0]);
         System.out.println("The highest number is " + arr[arr.length - 1]);
+
+    }
+
+    // determines the mean and then counts how many were smaller than the mean
+    public static void printMean(int[] arr, int sum) {
         double mean = (double) sum / arr.length;
         System.out.println("The mean is " + mean);
         int count = 0;
@@ -92,15 +171,6 @@ public class ProgrammingQuestion {
 
         }
         System.out.println("There are " + count + " number smaller than the mean. ");
-        // Read a string from the user
-        System.out.println("Enter a word ");
-        String palindromeStr = scanner.nextLine();
-        System.out.println(isPalindrome(palindromeStr));
-        System.out.println(allSubstring(palindromeStr));
-        System.out.println(countUnique(palindromeStr));
-        System.out.println(vowelsRemoved(palindromeStr));
-
-
     }
 
     // determine if the string is a palindrome
