@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Factorial {
     public static int Factorial(int number) {
+        number = Math.abs(number);
         // Base case
         if (number <= 0) {
             return 1;
@@ -19,7 +20,6 @@ public class Factorial {
 //        System.out.println("Enter number ");
         int number = scanner.nextInt();
         System.out.println(Factorial(number));
-
 
     }
 }
