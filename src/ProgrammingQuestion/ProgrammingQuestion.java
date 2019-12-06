@@ -23,6 +23,9 @@ public class ProgrammingQuestion {
         System.out.println(allSubstring(str));
         System.out.println(countUnique(str));
         System.out.println(vowelsRemoved(str));
+        printVowelsRemoved(str);
+
+
 
 
     }
@@ -283,6 +286,26 @@ public class ProgrammingQuestion {
             }
         }
         return letter;
+
+    }
+
+    public static void printVowelsRemoved(String str){
+        // aaaabc
+        // print bc
+        // vowels is a e i o u
+        for (int i = 0; i < str.length(); i++) {
+            // when character is not vowels we would print the character
+            if (str.charAt(i) != 'a' &&
+                    str.charAt(i) != 'e' &&
+                    str.charAt(i) != 'i' &&
+                    str.charAt(i) != 'o' &&
+                    str.charAt(i) != 'u'){
+                System.out.print(str.charAt(i));
+
+            }
+
+        }
+
 
     }
 

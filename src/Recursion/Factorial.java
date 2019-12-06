@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Factorial {
     public static int Factorial(int number) {
+        // Base case
         if (number <= 0) {
             return 1;
 

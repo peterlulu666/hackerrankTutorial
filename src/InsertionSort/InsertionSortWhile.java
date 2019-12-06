@@ -17,7 +17,9 @@ public class InsertionSortWhile {
 //            }
             for (int sortedIndex = boundaryIndex - 1; sortedIndex >= 0; sortedIndex--) {
                 if (temp < arr[sortedIndex]) {
+                    // Shift
                     arr[sortedIndex + 1] = arr[sortedIndex];
+                    // Replace
                     arr[sortedIndex] = temp;
 
                 }
