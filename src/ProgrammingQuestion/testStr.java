@@ -1,8 +1,13 @@
 package ProgrammingQuestion;
 
+import java.util.Arrays;
+
 public class testStr {
     public static void main(String[] args) {
-        String str = "11211";
-        System.out.println(str.substring(str.length() - 1, str.length()));
+        int[] number = new int[]{1,2,3};
+        System.out.println(Arrays.toString(number));
+        var strArr = new String[]{"abc"};
+        System.out.println(Arrays.toString(strArr));
+
     }
 }

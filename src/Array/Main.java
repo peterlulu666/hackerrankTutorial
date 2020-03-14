@@ -26,7 +26,7 @@ public class Main {
 //        size = arrStrSplit.length;
         // String array to integer array
         int[] numberArr = new int[size];
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < arrStrSplit.length; i++) {
             numberArr[i] = Integer.parseInt(arrStrSplit[i]);
 
         }
