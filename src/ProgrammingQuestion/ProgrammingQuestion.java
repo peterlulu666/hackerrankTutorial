@@ -20,6 +20,7 @@ public class ProgrammingQuestion {
         printMean(arr, sum);
         String str = inputString();
         System.out.println(isPalindrome(str));
+        System.out.println(checkPalindrome(str));
         System.out.println(allSubstring(str));
         System.out.println(countUnique(str));
         System.out.println(vowelsRemoved(str));
@@ -206,6 +207,30 @@ public class ProgrammingQuestion {
 
 
         return true;
+    }
+
+    /**
+     * checkPalindrome
+     *
+     * @param str
+     * @return true if the string is palindrome or false if the string is not palindrome
+     */
+    public static boolean checkPalindrome(String str){
+        int leftCount = 0;
+        int rightCount = str.length() - 1;
+        while (str.charAt(leftCount) == str.charAt(rightCount) && leftCount < rightCount){
+            leftCount++;
+            rightCount--;
+
+        }
+
+        if (leftCount >= rightCount){
+            return true;
+
+        }
+
+        return false;
+
     }
 
     // print all substrings of the string
